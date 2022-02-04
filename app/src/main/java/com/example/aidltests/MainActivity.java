@@ -153,17 +153,18 @@ public class MainActivity extends AppCompatActivity {
 
 //                        MyData2 mydata = new MyData2(100);
 //
-//                        Bundle bundle = new Bundle();
-//                        bundle.putParcelable("data", mydata);
-//
-//                        Log.d(TAG,"data : "+mydata.getnum());
-//                        //MyData2 mydata2 = (MyData2) bundle.getParcelable("data");
-//                        Log.d(TAG,"bundle : " + mydata);
-//                        myService.setMyData(bundle);
-                        mydata.setnum(900);
+                        Bundle bundle = new Bundle();
+                        bundle.putParcelable("data", mydata);
+
                         Log.d(TAG,"data : "+mydata.getnum());
-                        myService.setMyData2(mydata);
-                        //Log.d(TAG,"data2 : "+data2.getnum());
+                        //MyData2 mydata2 = (MyData2) bundle.getParcelable("data");
+                        Log.d(TAG,"bundle : " + mydata);
+                        //myService.setMyData2(mydata);
+                        myService.setMyData(bundle);
+//                        mydata.setnum(900);
+//                        Log.d(TAG,"data : "+mydata.getnum());
+//                        myService.setMyData2(mydata);
+//                        //Log.d(TAG,"data2 : "+data2.getnum());
                     }
                     else
                     {

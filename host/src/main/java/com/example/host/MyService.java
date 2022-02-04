@@ -36,8 +36,9 @@ public class MyService extends Service {
             Log.d(TAG,"setmydata running");
             bundle.setClassLoader(getClass().getClassLoader());
             MyData2 data = (MyData2) bundle.getParcelable("data");
+
             Log.d(TAG,"received data : "+data.getnum());
-            Log.d(TAG,"received data : "+data);
+            Log.d(TAG,"class name test : " + data.getClass().toString().equals("class com.example.host.MyData2"));
 
             num = data.getnum();
             return;
@@ -47,6 +48,7 @@ public class MyService extends Service {
         public void setMyData2(MyData2 data) throws RemoteException {
 
             Log.d(TAG,""+data.getnum());
+            num=data.getnum();
             return;
         }
     };
